@@ -2,29 +2,20 @@
 {% extends 'base.html' %}
 
 {%block content %}
-    keyword
 
-<form action = '/search'>
+<form action = '/'>
     <p>
         Enter your keyword? 
         <input type = "text" name ="name"/>
-    </p>
+        <button type="submit">Search</button>
     <p>
-        <botton type="search gifs">Search</botton>
-         gifs
-    </p>
-
-    <button type="submit">Search</button>
 </form>
-
-<P>
-    <div>
-
-        {%for gif in git_results%}
-            {%include 'gif.html'%}
-        {%endfor%}
-</div>
-</P>
+<br/>
+<p>
+    {% for gif in gif_results %}
+        {% include 'gif.html' %}
+    {% endfor %}
+</p>
 
 {% endblock %}
 
