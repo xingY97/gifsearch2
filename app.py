@@ -22,19 +22,20 @@ def index():
     # TODO: Make an API call to Tenor using the 'requests' library. For 
     # reference on how to use Tenor, see: 
     # https://tenor.com/gifapi/documentation
-    r = requests.get("https://api.tenor.com/v1/search?q=%s&key=%s&limit=%s" % (params['q'],params['key'],params['limit']) )
+    r = requests.get("https://api.tenor.com/v1/search?q=%s&key=%s&limit=%s" % (params['q'], params['key'], params['limit']) )
     
     # TODO: Use the '.json()' function to get the JSON of the returned response
     # object
     gifs = json.loads(r.content)
-    print(gifs)
+    
+    
 
     gif_results = list()
     for i in range(params['limit']):
-        gif_results.append({"url":gifs["results"][i]["url"], "id": gifs["results"][i]["itemurl"], "itemurl": gifs["results"][i]["itemurl"]})
-
-
-
+        gif_results.append(gifs['results'][i]['url']) #gifs['results'][0]['id'], gifs['results'][0]['itemurl'])
+        
+    
+    return render_template("index.html", gif_results=gif_results)
 
 
     # TODO: Using dictionary notation, get the 'results' field of the JSON,
@@ -44,7 +45,7 @@ def index():
     # TODO: Render the 'index.html' template, passing the list of gifs as a
     # named parameter called 'gifs'
 
-    return render_template("index.html", gif_results=gif_results)
+    
 
 if __name__ == '__main__':
     app.run(debug=True)
