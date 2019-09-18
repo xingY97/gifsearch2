@@ -1,12 +1,4 @@
-# How to Use This Starter Code
 
-To create your own repository using this code:
-
-1. Clone the repository onto your computer using the `git clone` command
-1. Run `git remote remove origin` to disconnect the code from Make-School-Labs
-1. In GitHub.com, create your own repository. **IMPORTANT**: Do not add a README
-1. Run `git remote add origin git@github.com:YOUR_USERNAME/YOUR_REPO_NAME.git`, replacing YOUR_USERNAME with your username and YOUR_REPO_NAME with your repository name
-1. Now you should be able to add, commit, and push as normal!
 
 # How to Run This Starter Code
 
