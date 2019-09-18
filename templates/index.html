@@ -1,14 +1,12 @@
 <!-- templates/index.html -->
 {% extends 'base.html' %}
 
-{%block title %}
-    Hello words!
-{% endblock %}
+{%block content %}
+    keyword
 
-{% block content %}
-<form action = '/'>
+<form action = '/search'>
     <p>
-        Enter your keyword? <br/>
+        Enter your keyword? 
         <input type = "text" name ="name"/>
     </p>
     <p>
@@ -28,14 +26,20 @@
             <option value="8">eight</option>
             <option value="9">nine</option>
             <option value="10">ten</option>
-
+            
         </select>
     </p>
     <button type="submit">Search</button>
 </form>
+
+<P>
+    {%  % }
+
+
+    
+</P>
+
 {% endblock %}
-
-
 
 
 

@@ -31,9 +31,11 @@ def index():
     gifs = json.loads(r.content)
     print(gifs)
 
-    gif_results = []
-    for i in range params['limit']:
-        
+    gif_results = list()
+    for i in range(params['limit']):
+        gif_results.append({"url":gifs["results"][i]["url"], "id": gifs["results"][i]["itemurl"], "itemurl": gifs["results"][i]["itemurl"]})
+
+
 
 
 
@@ -44,7 +46,7 @@ def index():
     # TODO: Render the 'index.html' template, passing the list of gifs as a
     # named parameter called 'gifs'
 
-    return render_template("index.html", gifs=gifs)
+    return render_template("index.html", gif_results=gif_results)
 
 if __name__ == '__main__':
     app.run(debug=True)
