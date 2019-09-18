@@ -19,8 +19,6 @@ def index():
         "key": "7KOU0A3XQ2BG",
         "limit" : 10
     }
-
-    #search_term = "smile"
     # TODO: Make an API call to Tenor using the 'requests' library. For 
     # reference on how to use Tenor, see: 
     # https://tenor.com/gifapi/documentation
