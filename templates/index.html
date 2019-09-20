@@ -1,15 +1,14 @@
 <!-- templates/index.html -->
+<body background="/static/background.jpg">
 {% extends 'base.html' %}
-
 {% block content %}
-
 <form action = '/'>
-    <h1>
+    <h1 color=white>
         GIF Search Engine
     </h1>
     <p>
         <div class="wrapper">
-        <input type = "text" name ="q"/>
+        <input type = "text" name ="q" autofocus/>
         </div>
         <br>
         <div class="wrapper">
@@ -24,9 +23,8 @@
     {% endfor %}
 </div>
 
-
 {% endblock %}
-
+</body>
 
 
 <!-- TODO: Extend 'base.html' and put content into a block 'body' to match -->
