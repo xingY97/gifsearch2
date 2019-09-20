@@ -1,32 +1,26 @@
-<!-- templates/index.html -->
-{% extends 'base.html' %}
-
-{%block content %}
-
-<form action = '/'>
-    <p>
-        Enter your keyword? 
-        <input type = "text" name ="name"/>
-        <button type="submit">Search</button>
-    <p>
-</form>
-<br/>
-<p>
-    {% for gif in gif_results %}
-        {% include 'gif.html' %}
-    {% endfor %}
-</p>
-
-{% endblock %}
-
-
-
-<!-- TODO: Extend 'base.html' and put content into a block 'body' to match -->
-
-<!-- TODO: Make an HTML form containing a search box and a submit button to add
-    the search term to the query string. The form should have a target of '/' to
-    send us to the same route. -->
-
-<!-- TODO: Make a for loop to loop over GIFs passed in from the server -->
-
-<!-- TODO: For each gif, include the 'gif.html' template to display it -->
+<body background="/static/background.jpg"> <!--dog-->
+    {% extends 'base.html' %}
+    {% block content %}
+    <form action = '/'>
+        <h1>
+            GIF Search Engine
+        </h1>
+        <p>
+            <div class="wrapper">
+                <input type = "text" name ="q" autofocus/>
+            </div>
+            <br>
+            <div class="wrapper">
+                <button type="submit">Search</button>
+            </div>
+        <p>
+    </form>
+    <br/>
+    <div class="grid-container">
+        {% for gif in gif_results %}
+            {% include 'gif.html' %}
+        {% endfor %}
+    </div>
+    ​
+    {% endblock %}
+    </body>
