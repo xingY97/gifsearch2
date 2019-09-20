@@ -1,20 +1,27 @@
 <!-- templates/index.html -->
 {% extends 'base.html' %}
 
-{%block content %}
+{% block content %}
 
 <form action = '/'>
+    <h1>
+        GIF Search Engine
+    </h1>
     <p>
-        Enter your keyword? 
-        <input type = "text" name ="name"/>
+        Enter your keyword:
+        <input type = "text" name ="q"/>
         <button type="submit">Search</button>
     <p>
 </form>
 <br/>
 <p>
-    {% for gif in gif_results %}
-        {% include 'gif.html' %}
-    {% endfor %}
+    <div class="row">
+        <div class="column">
+            {% for gif in gif_results %}
+                {% include 'gif.html' %}
+            {% endfor %}
+        </div>
+    </div>
 </p>
 
 {% endblock %}
