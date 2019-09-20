@@ -14,15 +14,13 @@
     <p>
 </form>
 <br/>
-<p>
-    <div class="row">
-        <div class="column">
-            {% for gif in gif_results %}
-                {% include 'gif.html' %}
-            {% endfor %}
-        </div>
+<center>
+    <div class="grid-container">
+        {% for gif in gif_results %}
+            {% include 'gif.html' %}
+        {% endfor %}
     </div>
-</p>
+</center>
 
 {% endblock %}
 
