@@ -8,19 +8,19 @@
         GIF Search Engine
     </h1>
     <p>
-        Enter your keyword:
         <input type = "text" name ="q"/>
-        <button type="submit">Search</button>
+        <div class="wrapper">
+            <button type="submit">Search</button>
+        </div>
     <p>
 </form>
 <br/>
-<center>
-    <div class="grid-container">
-        {% for gif in gif_results %}
-            {% include 'gif.html' %}
-        {% endfor %}
-    </div>
-</center>
+<div class="grid-container">
+    {% for gif in gif_results %}
+        {% include 'gif.html' %}
+    {% endfor %}
+</div>
+
 
 {% endblock %}
 
